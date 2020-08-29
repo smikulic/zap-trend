@@ -2,3 +2,4 @@
 npm-debug.log
 .DS_Store
 /*.env
+/data # disabled after initial deploy so we don't override our database apartments.json
