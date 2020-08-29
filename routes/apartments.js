@@ -2,7 +2,7 @@ const apartmentRoutes = (app, fs) => {
   const dataPath = "./data/apartments.json";
 
   // READ
-  app.get("/apartments", (req, res) => {
+  app.get("/api/apartments", (req, res) => {
     fs.readFile(dataPath, "utf8", (err, data) => {
       if (err) {
         throw err;

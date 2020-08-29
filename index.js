@@ -12,6 +12,7 @@ const dataPath = "./data/apartments.json";
 // including handling JSON data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/', express.static('public'))
 
 const routes = require("./routes/routes.js")(app, fs);
 
