@@ -5,7 +5,8 @@
   "author": "Sinisa Mikulic <sinisa.mikulic@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon server.js"
+    "start:dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "devDependencies": {
     "axios": "^0.20.0",
