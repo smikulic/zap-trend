@@ -3,6 +3,11 @@ const cheerio = require("cheerio");
 
 let dailyTopData = {};
 let dailyBottomData = {};
+let daily = {
+  day: Date(),
+  highest: [],
+  lowest: [],
+}
 
 const total = 20;
 const numberPattern = /\d+/g;
