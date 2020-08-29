@@ -6,6 +6,7 @@ const { scrapeTopAndBottomApartments } = require("./st-scraper");
 
 const app = express();
 
+const PORT = process.env.PORT || 3001;
 const dataPath = "./data/apartments.json";
 
 // configure our express instance with some body-parser settings
@@ -16,7 +17,7 @@ app.use('/', express.static('public'))
 
 const routes = require("./routes/routes.js")(app, fs);
 
-const server = app.listen(3001, () => {
+const server = app.listen(PORT, () => {
   console.log("listening on port %s...", server.address().port);
 });
 
