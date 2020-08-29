@@ -1,0 +1,55 @@
+[
+  {
+    "day": "Fri Aug 28 2020 15:03:46 GMT+0200 (Central European Summer Time)",
+    "lowest": {
+      "apartments": [
+        { "price": 43000 },
+        { "price": 53000 },
+        { "price": 55000 },
+        { "price": 55500 },
+        { "price": 56000 },
+        { "price": 56000 },
+        { "price": 60000 },
+        { "price": 63000 },
+        { "price": 65000 },
+        { "price": 66500 },
+        { "price": 68000 },
+        { "price": 69900 },
+        { "price": 70000 },
+        { "price": 70000 },
+        { "price": 71000 },
+        { "price": 73000 },
+        { "price": 74000 },
+        { "price": 75000 },
+        { "price": 75000 },
+        { "price": 79000 }
+      ],
+      "total": 20
+    },
+    "highest": {
+      "apartments": [
+        { "price": 1000000 },
+        { "price": 970000 },
+        { "price": 870000 },
+        { "price": 771000 },
+        { "price": 650000 },
+        { "price": 650000 },
+        { "price": 640000 },
+        { "price": 600000 },
+        { "price": 600000 },
+        { "price": 600000 },
+        { "price": 591862 },
+        { "price": 550000 },
+        { "price": 530000 },
+        { "price": 512500 },
+        { "price": 510000 },
+        { "price": 500000 },
+        { "price": 500000 },
+        { "price": 500000 },
+        { "price": 499000 },
+        { "price": 470000 }
+      ],
+      "total": 20
+    }
+  }
+]

@@ -1,13 +1,11 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
 
-let dailyTopData = {};
-let dailyBottomData = {};
-let daily = {
+let dailyData = {
   day: Date(),
   highest: [],
   lowest: [],
-}
+};
 
 const total = 20;
 const numberPattern = /\d+/g;
@@ -42,28 +40,34 @@ getApartments = ($html) => {
   return prices.slice(0, total);
 };
 
-axios(topApartmentsUrl)
-  .then((response) => {
-    const $html = cheerio.load(response.data);
+const scrapeTopAndBottomApartments = async (cb) => {
+  try {
+    await axios(topApartmentsUrl)
+      .then((response) => {
+        const $html = cheerio.load(response.data);
+        dailyData.highest = getApartments($html);
+      })
+      .catch(console.error);
+  } catch (err) {
+    console.error(err);
+  }
+  try {
+    await axios(bottomApartmentsUrl)
+      .then((response) => {
+        const $html = cheerio.load(response.data);
+        dailyData.lowest = getApartments($html);
+      })
+      .catch(console.error);
+  } catch (err) {
+    console.error(err);
+  }
+  cb(dailyData);
+};
 
-    dailyTopData = {
-      day: Date(),
-      apartments: getApartments($html),
-      total,
-    };
-    console.log(dailyTopData);
-  })
-  .catch(console.error);
 
-axios(bottomApartmentsUrl)
-  .then((response) => {
-    const $html = cheerio.load(response.data);
 
-    dailyBottomData = {
-      day: Date(),
-      apartments: getApartments($html),
-      total,
-    };
-    console.log(dailyBottomData);
-  })
-  .catch(console.error);
+// scrapeTopAndBottomApartments(fillOut);
+
+module.exports = {
+  scrapeTopAndBottomApartments,
+}
