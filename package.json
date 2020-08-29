@@ -4,17 +4,20 @@
   "main": "index.js",
   "author": "Sinisa Mikulic <sinisa.mikulic@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": "12.10"
+  },
   "scripts": {
     "start:dev": "nodemon index.js",
     "start": "node index.js"
   },
   "devDependencies": {
-    "axios": "^0.20.0",
-    "cheerio": "^1.0.0-rc.3",
     "nodemon": "^2.0.4"
   },
   "dependencies": {
     "express": "^4.17.1",
-    "node-cron": "^2.0.3"
+    "node-cron": "^2.0.3",
+    "axios": "^0.20.0",
+    "cheerio": "^1.0.0-rc.3"
   }
 }
