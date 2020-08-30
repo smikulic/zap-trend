@@ -22,8 +22,8 @@ const server = app.listen(PORT, () => {
 });
 
 // Daily taks runner
-cron.schedule("5 7 * * *", function () {
-  console.log("running a task every day at 7:05 am");
+cron.schedule("5 3 * * *", function () {
+  console.log("running a task every day at 3:05 am");
 
   const updateDailyData = (result) => {
     fs.readFile(dataPath, "utf8", (err, data) => {
